@@ -105,8 +105,8 @@ Promise.all([
 
 ]).then(([river, streams]) => {
 
-    riverLayer.addData(river);
-    streamsLayer.addData(streams);
+    riverLayer.addData(streams);
+    streamsLayer.addData(river);
 
     const bounds = L.featureGroup([
         riverLayer,
