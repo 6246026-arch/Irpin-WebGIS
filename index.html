@@ -93,12 +93,12 @@ const streamsLayer = L.geoJSON(null, {
 
 // Завантаження просторових даних
 Promise.all([
-    fetch('Irpine_River.geojson').then(r => {
+    fetch('Irpine_River.json').then(r => {
         if (!r.ok) throw new Error('Помилка завантаження річки');
         return r.json();
     }),
 
-    fetch('Irpin_Streams.geojson').then(r => {
+    fetch('Irpin_Streams.json').then(r => {
         if (!r.ok) throw new Error('Помилка завантаження водотоків');
         return r.json();
     })
